@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  catalystdev:
+    image: enigmampc/catalystdev
+    container_name: catalystdev
+    ports:
+      - "8888:8888"
+    volumes:
+      - "./.catalyst_data:/root/.catalyst"
+      - "./notebooks:/projects"
+      - "./algos:/catalyst/algos"
+    restart: always
